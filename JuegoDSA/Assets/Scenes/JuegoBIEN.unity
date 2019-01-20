@@ -20178,7 +20178,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogBox: {fileID: 878132817}
   dialogText: {fileID: 1965275988}
-  dialog: "\xA1Hola!"
+  dialog: "\xA1Una abrazadera!"
   playerInRange: 0
   joybutton: {fileID: 0}
   contents: {fileID: 11400000, guid: 30d86c5e0be98a7428ab7d2f1d826197, type: 2}
@@ -20918,7 +20918,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogBox: {fileID: 878132817}
   dialogText: {fileID: 1965275988}
-  dialog: "\xA1Un reflector!"
+  dialog: "\xA1Un dipolo!"
   playerInRange: 0
   joybutton: {fileID: 0}
   contents: {fileID: 11400000, guid: df419c3e2ec1e3e4f84f2fee696f79a7, type: 2}

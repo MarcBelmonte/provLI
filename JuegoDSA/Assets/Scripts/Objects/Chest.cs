@@ -45,7 +45,7 @@ public class Chest : MonoBehaviour
         //dialog window on
         //dialog text = contents text
         dialogBox.SetActive(true);
-        dialogText.text = dialog;
+        dialogText.text = contents.itemDescription;
         //add contents to the inventory
         playerInventory.AddItem(contents);
         playerInventory.currentItem = contents;

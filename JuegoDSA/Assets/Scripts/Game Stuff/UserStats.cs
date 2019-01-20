@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UserStats : MonoBehaviour
+public class UserAttributes : MonoBehaviour
 {
     int currentHealth, maxHealth, attack, checkPoint, points, enemiesKilled, level, user_id;
-    public UserStats() { }
+    public UserAttributes() { }
 
-public UserStats(int currentHealth, int maxHealth, int attack, int checkPoint, int points, int enemiesKilled, int level, int user_id)
+public UserAttributes(int currentHealth, int maxHealth, int attack, int checkPoint, int points, int enemiesKilled, int level, int user_id)
     {
         this.currentHealth = currentHealth;
         this.maxHealth = maxHealth;

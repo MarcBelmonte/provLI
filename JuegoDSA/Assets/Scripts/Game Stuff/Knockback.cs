@@ -25,9 +25,9 @@ public class Knockback : MonoBehaviour {
                 hit.AddForce(difference, ForceMode2D.Impulse);
                 if (other.gameObject.CompareTag("Enemy") && other.isTrigger)
                 {
-                    UserStats userStats = new UserStats();
+                    UserAttributes userStats = new UserAttributes();
                     apimanager = new APIManager();
-                    userStats = apimanager.getAttributes(1);
+                    userStats = apimanager.getAttributes();
                     damage = userStats.getAttack();
                     hit.GetComponent<Enemy>().currentState = EnemyState.stagger;
                     other.GetComponent<Enemy>().Knock(hit, knockTime,damage);

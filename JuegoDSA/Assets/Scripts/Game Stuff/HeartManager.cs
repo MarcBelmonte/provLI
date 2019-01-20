@@ -30,10 +30,10 @@ public class HeartManager : MonoBehaviour {
     {
         Debug.Log("Current Health of UpdateHearts: " + playerCurrentHealth.RuntimeValue);
         float tempHealth = playerCurrentHealth.RuntimeValue/2; // Considero que un corazon = 2
-        UserStats userStats = new UserStats();
+        UserAttributes userAttributes = new UserAttributes();
         apimanager = new APIManager();
-        userStats = apimanager.getAttributes(1);
-        heartContainers.initialValue = userStats.getMaxHealth()/2;
+        userAttributes = apimanager.getAttributes();
+        heartContainers.initialValue = userAttributes.getMaxHealth()/2;
         Debug.Log("Max Health in HeartManager: " + heartContainers.initialValue);
         for (int i =0; i<heartContainers.initialValue; i++)
         {

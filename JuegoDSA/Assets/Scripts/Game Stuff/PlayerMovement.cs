@@ -40,10 +40,10 @@ public class PlayerMovement : MonoBehaviour{
         gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
         transform.position = gm.lastCheckPointPos;
         joybutton = FindObjectOfType<Joybutton>();
-        UserStats userStats = new UserStats();
+        UserAttributes userAttributes = new UserAttributes();
         apimanager = new APIManager();
-        userStats = apimanager.getAttributes(1);
-        currentHealth.RuntimeValue = (float)userStats.getCurrentHealth();
+        userAttributes = apimanager.getAttributes();
+        currentHealth.RuntimeValue = (float)userAttributes.getCurrentHealth();
         playerHealthSignal.Raise();
     }
 	

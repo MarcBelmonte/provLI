@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class GameMaster : MonoBehaviour {
 
-    private static UserStats userStats;
+    private static UserAttributes userAttributes;
     private static GameMaster instance;
     public Vector2 lastCheckPointPos;
     public float lastHealth;

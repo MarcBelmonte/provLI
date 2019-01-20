@@ -5,7 +5,7 @@ using UnityEngine;
 public class APIManager : MonoBehaviour
 {
     // private GameMaster gm;
-    public UserStats userAttributes;
+    public UserAttributes userAttributes;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,11 +18,11 @@ public class APIManager : MonoBehaviour
         
     }
 
-    public UserStats getAttributes(int idUser)
+    public UserAttributes getAttributes()
     {
         #if UNITY_ANDROID
-               AndroidJavaObject attributesUserObject = new AndroidJavaObject("MainActivity");
-                UserStats res = attributesUserObject.Call<UserStats>("getAttributesUser");
+                /*AndroidJavaObject attributesUserObject = new AndroidJavaObject("MainActivity");
+                UserAttributes res = attributesUserObject.Call<UserAttributes>("getAttributesUser");
                 Debug.Log("Current health: " + res.getCurrentHealth());
                 Debug.Log("Max health: " + res.getMaxHealth());
                 Debug.Log("Attack: " + res.getAttack());
@@ -34,9 +34,9 @@ public class APIManager : MonoBehaviour
                 /*int cp = res.getCheckPoint();
                 if (cp == 1) gm.lastCheckPointPos = new Vector2(5,5); //Checkpoint Playa
                 else if(cp == 2) gm.lastCheckPointPos = new Vector2(16, 5);//Checkpoint Tribu
-                else if(cp == 3) gm.lastCheckPointPos = new Vector2(35, 5);//Checkpoint Jungla
-                */
-        //UserStats res = new UserStats(4,8,1,1,28,2,1,idUser);
+                else if(cp == 3) gm.lastCheckPointPos = new Vector2(35, 5);//Checkpoint Jungla*/
+
+        UserAttributes res = new UserAttributes(4,8,1,1,28,2,1,1);
         return res;
 #else
 
@@ -46,4 +46,4 @@ public class APIManager : MonoBehaviour
 #endif
 
     }
-}
+    }
