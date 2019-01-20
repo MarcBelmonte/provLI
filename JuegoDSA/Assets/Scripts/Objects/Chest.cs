@@ -16,6 +16,7 @@ public class Chest : MonoBehaviour
     public Signal raiseItem;
     private Animator anim;
     public Inventory playerInventory;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,9 +43,9 @@ public class Chest : MonoBehaviour
     public void OpenChest()
     {
         //dialog window on
-        dialogBox.SetActive(true);
         //dialog text = contents text
-        dialogText.text = contents.itemDescription;
+        dialogBox.SetActive(true);
+        dialogText.text = dialog;
         //add contents to the inventory
         playerInventory.AddItem(contents);
         playerInventory.currentItem = contents;
@@ -53,17 +54,15 @@ public class Chest : MonoBehaviour
         //set the chest to opened
         isOpen = true;
         anim.SetBool("opened", true);
-        isOpen = true;
-
-
     }
     public void ChestAlreadyOpen()
     {
-       
-            //Dialog off
+
+        //Dialog off
             dialogBox.SetActive(false);
             //raise the signal to the player to stop animating
             raiseItem.Raise();
+
     }
     private void OnTriggerEnter2D(Collider2D other)
     {

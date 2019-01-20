@@ -102,7 +102,7 @@ public class PlayerMovement : MonoBehaviour{
             else
             {
                 animator.SetBool("receive item", false);
-                currentState = PlayerState.walk;
+                currentState = PlayerState.idle;
                 receivedItemSprite.sprite = null;
                 playerInventory.currentItem = null;
                 Debug.Log("Estoy en el else");

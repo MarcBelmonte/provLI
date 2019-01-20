@@ -7,20 +7,22 @@ public class Inventory : ScriptableObject
 {
     public Item currentItem;
     public List<Item> items = new List<Item>();
-    public int numberOfKeys;//numero de piezas
+    public int numberOfKeys;
+
 
     public void AddItem(Item itemToAdd)
     {
-        //is item a key?
         if (itemToAdd.isKey)
         {
             numberOfKeys++;
+            Debug.Log("Numero de piezas: " + numberOfKeys);
         }
         else
         {
             if (!items.Contains(itemToAdd))
             {
-
+                items.Add(itemToAdd);
+                Debug.Log("Length of items: " + items.Count);
             }
         }
     }

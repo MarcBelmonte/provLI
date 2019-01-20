@@ -22,7 +22,7 @@ public class APIManager : MonoBehaviour
     {
         #if UNITY_ANDROID
                AndroidJavaObject attributesUserObject = new AndroidJavaObject("MainActivity");
-                UserStats res = attributesUserObject.Call<UserStats>("myStatsCallback",idUser);
+                UserStats res = attributesUserObject.Call<UserStats>("getAttributesUser");
                 Debug.Log("Current health: " + res.getCurrentHealth());
                 Debug.Log("Max health: " + res.getMaxHealth());
                 Debug.Log("Attack: " + res.getAttack());
@@ -40,7 +40,7 @@ public class APIManager : MonoBehaviour
         return res;
 #else
 
-        UserStats user = new UserStats(4, 8, 1, 1, 288, 2, 1, 1);
+        UserStats user = new UserStats(8, 10, 1, 1, 288, 2, 1, 1);
         return user;
        
 #endif
